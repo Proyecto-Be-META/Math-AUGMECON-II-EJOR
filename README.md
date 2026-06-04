@@ -182,7 +182,7 @@ node lib/implementation/main.js nsga
 The main available parameters of NSGA-II are available through the execution of the following command:
 
 ```bash
-node lib/implementation/main.js nsga --help                                                                                             ✔  at 13:11:25  
+node lib/implementation/main.js nsga --help
 main.js nsga
 
 Runs the NSGA-II
