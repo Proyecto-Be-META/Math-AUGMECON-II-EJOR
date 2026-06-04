@@ -1,7 +1,9 @@
 # A Matheuristic Augmented $\varepsilon$-constraint Framework for a Bi-objective Multi-Depot Cumulative Capacitated Vehicle Routing Problem
 
 > Eduardo Segredo, Samuel Nucamendi, Eduardo Lalla-Ruiz, Gara Miranda
+>
 > European Journal of Operational Research
+>
 > DOI: Accepted for publication
 
 This repository contains the instances, source code, execution scripts, and experimental results used in the evaluation presented in the article. Its purpose is to support reproducibility and enable comparison with future work.
