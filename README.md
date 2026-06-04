@@ -248,19 +248,19 @@ TODO:
 If you use this repository, the instances, the source code, or the experimental results in your research, please cite the associated article:
 
 ```bibtex
-@article{[key],
-  title   = {[Article Title]},
-  author  = {[Authors]},
-  journal = {[Journal or conference]},
-  year    = {[Year]},
-  doi     = {[DOI]}
+@article{segredo:2026a,
+  title   = {A Matheuristic Augmented $\varepsilon$-constraint Framework for a Bi-objective Multi-Depot Cumulative Capacitated Vehicle Routing Problem},
+  author  = {Eduardo Segredo, Samuel Nucamendi, Eduardo Lalla-Ruiz, Gara Miranda},
+  journal = {European Journal of Operational Research},
+  year    = {2026},
+  doi     = {Accepted for publication}
 }
 ```
 
 You may also cite this repository directly:
 
 ```bibtex
-@misc{[repository_key],
+@misc{segredo:2026b,
   title        = {A Matheuristic Augmented $\varepsilon$-constraint Framework for a Bi-objective Multi-Depot Cumulative Capacitated Vehicle Routing Problem},
   author       = {Eduardo Segredo, Samuel Nucamendi, Eduardo Lalla-Ruiz, Gara Miranda},
   year         = {2026},
