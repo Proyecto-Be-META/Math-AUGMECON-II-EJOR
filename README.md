@@ -34,7 +34,6 @@ In particular, it includes:
 * Benchmark instances used in the experimental study.
 * Source code required to run the evaluated algorithms or procedures.
 * Experimental results reported in or derived from the article.
-* Additional information to interpret, compare, or extend the results.
 
 ---
 
