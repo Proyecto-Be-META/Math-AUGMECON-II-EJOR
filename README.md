@@ -137,8 +137,9 @@ The main components are:
 
 ```text
 source-code/
-├── math-augmecon-ii      # Main entry point
-├── nsga-ii               # Implementation of the main method
+├── augmecon-ii           # Source code of AUGMECON-II
+├── math-augmecon-ii      # Source code of Math-AUGMECON-II
+├── nsga-ii               # Source code of NSGA-II
 ```
 
 ### Implemented methods
@@ -147,21 +148,21 @@ This repository includes implementations of:
 
 | Method             | Description                                              |
 | ------------------ | -------------------------------------------------------- |
-| `NSGA-II`          | Memetic algorithm based on NSGA-II                       |
 | `AUGMECON-II`      | Exact method based on AUGMECON-II                        |
 | `Math-AUGMECON-II` | Proposed math-heuristic based on NSGA-II and AUGMECON-II |
+| `NSGA-II`          | Memetic algorithm based on NSGA-II                       |
 
 ---
 
-## Requirements
+### Dependencies
 
 To run the code, the following dependencies are required:
 
-* NSGA-II: Node.js and Node Package Manager (`npm`).
 * AUGMECON-II:
 * Math-AUGMECON-II:
+* NSGA-II: Node.js and Node Package Manager (`npm`).
 
-### Installing dependencies
+#### Installing dependencies
 
 In the case of NSGA-II, the following steps have to be performed on the directory `source-code/nsga-ii` of the repository:
 
@@ -170,15 +171,15 @@ In the case of NSGA-II, the following steps have to be performed on the director
 
 ---
 
-## Execution
+### Execution
 
-To run NSGA-II (from `source-code/nsga-ii`):
+To run NSGA-II (from directory `source-code/nsga-ii` of the repository):
 
 ```bash
 node lib/implementation/main.js nsga
 ```
 
-The main available parameters of NSGA-II are available through the execution of:
+The main available parameters of NSGA-II are available through the execution of the following command:
 
 ```bash
 node lib/implementation/main.js nsga --help                                                                                             ✔  at 13:11:25  
@@ -236,7 +237,9 @@ results/
 
 ### Result format
 
-Each result file contains information such as:
+Each result file contains the following information:
+
+TODO:
 
 ---
 
@@ -258,11 +261,11 @@ You may also cite this repository directly:
 
 ```bibtex
 @misc{[repository_key],
-  title        = {[Repository Title]},
-  author       = {[Authors]},
-  year         = {[Year]},
-  howpublished = {\url{[Repository URL]}},
-  note         = {Repository associated with the article [Article Title]}
+  title        = {A Matheuristic Augmented $\varepsilon$-constraint Framework for a Bi-objective Multi-Depot Cumulative Capacitated Vehicle Routing Problem},
+  author       = {Eduardo Segredo, Samuel Nucamendi, Eduardo Lalla-Ruiz, Gara Miranda},
+  year         = {2026},
+  howpublished = {\url{https://github.com/PAL-ULL/Math-AUGMECON-II-EJOR}},
+  note         = {Repository associated with the article A Matheuristic Augmented $\varepsilon$-constraint Framework for a Bi-objective Multi-Depot Cumulative Capacitated Vehicle Routing Problem} published in the European Journal of Operational Research}
 }
 ```
 
