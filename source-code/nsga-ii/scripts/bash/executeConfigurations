@@ -1,0 +1,56 @@
+#!/bin/bash
+
+# for i in {1..30}
+# do
+#   npm run solve -- --sp -f instances/10x4-1.txt -g 250 -p 100 -s 5 --ns 50 > experiment_results/10x4x5-1/ls-50-$i.txt &
+# done
+
+# for i in {1..30}
+# do
+#   npm run solve -- --sp -f instances/10x4-2.txt -g 250 -p 100 -s 5 --ns 10 > experiment_results/10x4x5-2/ls-10-$i.txt &
+# done
+
+# for i in {1..30}
+# do
+#   npm run solve -- --sp -f instances/10x4-2.txt -g 250 -p 100 -s 5 --ns 50 > experiment_results/10x4x5-2/ls-50-$i.txt &
+# done
+
+# for i in {1..30}
+# do
+#   npm run solve -- --sp -f instances/10x4-3.txt -g 250 -p 100 -s 5 --ns 10 > experiment_results/10x4x5-3/ls-10-$i.txt &
+# done
+
+# for i in {1..30}
+# do
+#   npm run solve -- --sp -f instances/10x4-3.txt -g 250 -p 100 -s 5 --ns 50 > experiment_results/10x4x5-3/ls-50-$i.txt &
+# done
+
+# for i in {1..30}
+# do
+#   npm run solve -- --sp -f instances/25x4-1.txt -g 250 -p 100 -s 10 --ns 10 > experiment_results/25x4x10-1/ls-10-$i.txt &
+# done
+
+for i in {1..30}
+do
+  npm run solve -- --sp -f instances/25x4-1.txt -g 250 -p 100 -s 10 --ns 50 > experiment_results/25x4x10-1/ls-50-$i.txt &
+done
+
+# for i in {1..30}
+# do
+#   npm run solve -- --sp -f instances/25x4-2.txt -g 250 -p 100 -s 10 --ns 10 > experiment_results/25x4x10-2/ls-10-$i.txt &
+# done
+
+for i in {1..30}
+do
+  npm run solve -- --sp -f instances/25x4-2.txt -g 250 -p 100 -s 10 --ns 50 > experiment_results/25x4x10-2/ls-50-$i.txt &
+done
+
+# for i in {1..30}
+# do
+#   npm run solve -- --sp -f instances/25x4-3.txt -g 250 -p 100 -s 10 --ns 10 > experiment_results/25x4x10-3/ls-10-$i.txt &
+# done
+
+for i in {1..30}
+do
+  npm run solve -- --sp -f instances/25x4-3.txt -g 250 -p 100 -s 10 --ns 50 > experiment_results/25x4x10-3/ls-50-$i.txt &
+done
