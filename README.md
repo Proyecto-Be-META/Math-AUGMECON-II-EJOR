@@ -275,6 +275,8 @@ You may also cite this repository directly:
 
 For questions, suggestions, or issues related to this repository, please contact:
 
-**Eduardo Segredo**
-Universidad de La Laguna
-esegredo@ull.edu.es
+> **Eduardo Segredo**
+> 
+> Universidad de La Laguna
+> 
+> esegredo@ull.edu.es
