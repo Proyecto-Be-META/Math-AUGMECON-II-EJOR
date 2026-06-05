@@ -82,7 +82,7 @@ customer_n_demand
 depot_1_load
 depot_2_load
 ...
-depot_n_load
+depot_m_load
 ```
 
 Example:
