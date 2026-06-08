@@ -269,6 +269,14 @@ You may also cite this repository directly:
 }
 ```
 
+## Acknowledgements
+
+Samuel Nucamendi-Guillén thanks Universidad Panamericana for partially funding this project under the grant UP-CI-2024-GDL-08-ING.
+
+This work is also partially supported by Project PID2023‐152614OB‐I00 funded by MICIU/AEI/10.13039/501100011033 and by "ERDF/EU".
+
+We would like to express our sincere gratitude for the invaluable assistance provided during part of this work by Cristo Daniel Navarro Rodríguez and Professor Casiano Rodríguez León.
+
 ---
 
 ## Contact
