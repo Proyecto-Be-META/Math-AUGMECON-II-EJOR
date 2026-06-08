@@ -19,7 +19,7 @@ Numfront:
 ...
 
 <Algorithm_Name>: <Number_of_Solutions>
-<f1> <f2>
+<Objective 1> <Objective 2>
 ...
 ```
 
@@ -54,14 +54,19 @@ followed by the objective vectors of the nondominated solutions found by that al
 Example:
 
 ```text
-AUGMECON-II: 3
-
-954.30396 426.01668
-986.45241 412.83794
-999.32659 411.05648
+AUGMECON2:	9
+545.69071	412.43668
+580.30118	407.15804
+583.62475	403.80217
+585.20545	401.95141
+586.92475	397.23363
+588.70621	393.09150
+592.26912	384.87295
+661.49005	379.59431
+724.30561	376.39069
 ```
 
-This indicates that AUGMECON-II found three nondominated solutions.
+This indicates that AUGMECON-II found nine nondominated solutions.
 
 ---
 
@@ -70,7 +75,7 @@ This indicates that AUGMECON-II found three nondominated solutions.
 Each row represents one Pareto solution:
 
 ```text
-999.32659 411.05648
+545.69071	412.43668
 ```
 
 where:
@@ -93,7 +98,7 @@ Reference Pareto front generated using the exact AUGMECON-II method.
 Example:
 
 ```text
-AUGMECON-II: 3
+AUGMECON-II: 9
 ```
 
 ---
@@ -112,7 +117,7 @@ means:
 
 - Algorithm: NSGA-II
 - Run: 12
-- Solutions found: 3
+- Solutions found: 9
 
 ---
 
@@ -123,14 +128,14 @@ Results from the *k-th independent run* of Math-AUGMECON-II.
 Example:
 
 ```text
-Math-AUGMECON-II_7: 3
+Math-AUGMECON-II_7: 9
 ```
 
 means:
 
 - Algorithm: Math-AUGMECON-II
 - Run: 7
-- Solutions found: 3
+- Solutions found: 9
 
 ---
 
@@ -140,21 +145,32 @@ means:
 Numfront:
 61
 
-NSGA-II_1: 3
-
-999.32659 411.05648
-954.30396 426.01668
-986.45241 412.83794
+NSGA-II_1:	9
+545.69071	412.43668
+580.30118	407.15804
+583.62475	403.80217
+585.20545	401.95141
+586.92475	397.23363
+588.70621	393.09150
+592.26912	384.87295
+661.49005	379.59431
+724.30561	376.39069
 ```
 
 Interpretation:
 
 - The reference Pareto front contains 61 solutions.
-- Run 1 of NSGA-II found 3 nondominated solutions.
+- Run 1 of NSGA-II found 9 nondominated solutions.
 - The corresponding objective vectors are:
-  - (999.32659, 411.05648)
-  - (954.30396, 426.01668)
-  - (986.45241, 412.83794)
+  - (545.69071, 412.43668)
+  - (580.30118,	407.15804)
+  - (583.62475,	403.80217)
+  - (585.20545,	401.95141)
+  - (586.92475,	397.23363)
+  - (588.70621,	393.09150)
+  - (592.26912,	384.87295)
+  - (661.49005,	379.59431)
+  - (724.30561,	376.39069)
 
 ---
 
