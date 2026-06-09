@@ -239,7 +239,194 @@ results/
 
 Each result file contains the following information:
 
-TODO:
+---
+
+#File Structure
+
+Each results file follows the format:
+
+```text
+Numfront:
+<N>
+
+<Algorithm_Name>: <Number_of_Solutions>
+<Objective 1> <Objective 2>
+<Objective 1> <Objective 2>
+...
+
+<Algorithm_Name>: <Number_of_Solutions>
+<Objective 1> <Objective 2>
+...
+```
+
+Example
+---
+
+Header
+
+The first section specifies the size of the reference Pareto front:
+
+```text
+Numfront:
+61
+```
+
+where:
+
+- Numfront = number of solutions in the reference Pareto front.
+
+---
+
+Algorithm Blocks
+
+Each algorithm block contains:
+
+```text
+Algorithm_Name: Number_of_Solutions
+```
+
+followed by the objective vectors of the nondominated solutions found by that algorithm.
+
+Example:
+
+```text
+AUGMECON2:	9
+545.69071	412.43668
+580.30118	407.15804
+583.62475	403.80217
+585.20545	401.95141
+586.92475	397.23363
+588.70621	393.09150
+592.26912	384.87295
+661.49005	379.59431
+724.30561	376.39069
+```
+
+This indicates that AUGMECON-II found nine nondominated solutions.
+
+---
+
+Objective Values
+
+Each row represents one Pareto solution:
+
+```text
+545.69071	412.43668
+```
+
+where:
+
+|    Column   |      Description      |
+|-------------|-----------------------|
+| Objective 1 | First objective value |
+| Objective 2 | Second objective value|
+
+The specific meaning of each objective depends on the optimization model.
+
+---
+
+Algorithms
+
+AUGMECON-II
+
+Reference Pareto front generated using the exact AUGMECON-II method.
+
+Example:
+
+```text
+AUGMECON-II: 9
+```
+
+---
+
+NSGA-II_k
+
+Results from the *k-th independent run* of NSGA-II.
+
+Example:
+
+```text
+NSGA-II_12: 3
+```
+
+means:
+
+- Algorithm: NSGA-II
+- Run: 12
+- Solutions found: 9
+
+---
+
+Math-AUGMECON-II_k
+
+Results from the *k-th independent run* of Math-AUGMECON-II.
+
+Example:
+
+```text
+Math-AUGMECON-II_7: 9
+```
+
+means:
+
+- Algorithm: Math-AUGMECON-II
+- Run: 7
+- Solutions found: 9
+
+---
+
+Example
+
+```text
+Numfront:
+61
+
+NSGA-II_1:	9
+545.69071	412.43668
+580.30118	407.15804
+583.62475	403.80217
+585.20545	401.95141
+586.92475	397.23363
+588.70621	393.09150
+592.26912	384.87295
+661.49005	379.59431
+724.30561	376.39069
+```
+
+Interpretation:
+
+- The reference Pareto front contains 61 solutions.
+- Run 1 of NSGA-II found 9 nondominated solutions.
+- The corresponding objective vectors are:
+  - (545.69071, 412.43668)
+  - (580.30118,	407.15804)
+  - (583.62475,	403.80217)
+  - (585.20545,	401.95141)
+  - (586.92475,	397.23363)
+  - (588.70621,	393.09150)
+  - (592.26912,	384.87295)
+  - (661.49005,	379.59431)
+  - (724.30561,	376.39069)
+
+---
+
+Notes
+
+- The Pareto front reported for each run of Math-AUGMECON-II considers the corresponding NSGA-II Pareto front as input
+- For instance, the front reported in Math-AUGMECON-II_1 considers NSGA-II_1 as input front
+
+---
+
+Example file:
+
+```text
+lr_01.txt
+```
+
+where:
+
+- `lr` identifies the problem instance category.
+- `01` identifies the specific test instance.
 
 ---
 
