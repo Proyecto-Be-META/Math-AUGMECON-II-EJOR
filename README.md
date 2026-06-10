@@ -310,10 +310,10 @@ Each row represents one Pareto solution:
 
 where:
 
-|    Column   |      Description      |
-|-------------|-----------------------|
-| Objective 1 | First objective value |
-| Objective 2 | Second objective value|
+|    Column   |      Description                     |
+|-------------|--------------------------------------|
+| Objective 1 | First objective value (latency)      |
+| Objective 2 | Second objective value (travel cost) |
 
 The specific meaning of each objective depends on the optimization model.
 
