@@ -253,7 +253,7 @@ Numfront:
 ...
 ```
 
-Example
+Examples
 ---
 
 Header
@@ -406,8 +406,8 @@ Interpretation:
 
 Notes
 
-- The Pareto front reported for each run of Math-AUGMECON-II considers the corresponding NSGA-II Pareto front as input
-- For instance, the front reported in Math-AUGMECON-II_1 considers NSGA-II_1 as input front
+- The Pareto front reported for each run of Math-AUGMECON-II considers the corresponding NSGA-II Pareto front as input.
+- For instance, the front reported in Math-AUGMECON-II_1 considers the Pareto front achieved in the run NSGA-II_1 as input.
 
 ---
 
