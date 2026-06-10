@@ -239,12 +239,6 @@ results/
 
 Each result file contains the following information:
 
----
-
-#File Structure
-
-Each results file follows the format:
-
 ```text
 Numfront:
 <N>
