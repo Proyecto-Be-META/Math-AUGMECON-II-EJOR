@@ -1,0 +1,87 @@
+#Payoff F1
+let e:= 0.001;
+let eps0:= 10000000;
+let eps1:= 10000000;
+let eps2:= 10000000;
+let r2:= 10000000;
+let qk:= 20;
+objective Latencia;
+solve;
+display Latencia >>LLRPBO3.txt;
+let up2:= Latencia;
+let o1:= Latencia;
+objective Distancia;
+solve;
+display Distancia >>LLRPBO3.txt;
+let lb2:= Distancia;
+let l2:= Distancia;
+display lb2 >>LLRPBO3.txt;
+#Pay off min F2|min F1
+let e:= 0;
+let eps0:=up2;
+solve;
+display Distancia >>LLRPBO3.txt;
+let up2:= Distancia;
+let o2:= Distancia;
+printf(o1 & " " & o2 & " " & _solve_elapsed_time & "\n") >>TablaMod3Ho.txt;
+#Pay off min F1|min F2
+let eps1:= lb2;
+let eps0:= 10000000;
+objective Latencia;
+solve;
+printf(Latencia & " " & lb2 & " " & _solve_elapsed_time & "\n") >>TablaMod3Ho.txt;
+let l1:= Latencia;
+display Latencia >>LLRPBO3.txt;
+
+#Payoff F2
+let e:= 0.001;
+let eps0:= 10000000;
+let eps1:= 10000000;
+let eps2:= up2;
+
+
+let r2:= up2 - lb2;
+let step2:= r2/qk;
+let t1:=0;
+let eps2:= up2;
+
+solve;
+
+display lb2, up2, eps2, r2, qk, step2;
+
+objective Biobjetivo;
+
+if r2 > 0.1 then{
+	printf("Obj1 Obj2 CPUTime \n") >>TablaMod3Ho.txt;
+	repeat 
+		{
+		display t1 >>LLRPBO3.txt;
+		let e:= 0.001;
+		let eps2:= up2 - t1*step2;
+		display eps2 >>LLRPBO3.txt;
+		solve;
+		let o1:= sum{i in origenes, j in clientes: j>0} o[i,j] * (sum{k in niveles} (k*w[i,j,k])) + sum{i in clientes, j in clientes: 0<i<>j>0} cost[i,j]*(sum{k in niveles: k < N} (k*y[i,j,k])); #>>LLRPBO3.txt;
+		if eps2-S >= 0 then{
+			let o2:= eps2 - S; # >>LLRPBO3.txt;
+		}
+		else{
+		 break;
+		}
+		printf(o1 & " " & o2 & " " & _solve_elapsed_time & "\n") >>TablaMod3Ho.txt;
+		let b:= S/step2;
+		display b, int(b), solve_result_num >>LLRPBO3.txt;
+		if solve_result = "infeasible" then {
+			printf "--- infeasible at %d ---\n\n",t1;
+			#break;
+		}
+		else{
+			let t1:= t1 + int(b);
+		}
+		let t1 := t1 + 1;
+	} 
+until t1 > qk;
+}
+else{
+	printf("La holgura es cero. No se puede hacer nada\n");
+}
+
