@@ -175,7 +175,13 @@ In the case of NSGA-II, the following steps have to be performed on the director
 
 #### AUGMECON-II and Math-AUGMECON-II
 
-Write here ...
+NOTE: You have to be placed in the folder ..\AUGMECON-II\
+
+If you desire to run AUGMECON-II with the original fleet size
+1. `include LLRPBO.run`
+
+If you desire to run AUGMECON-II with the reduced fleet size
+1. `include LLRPBO_RF.run`
 
 #### NSGA-II
 
