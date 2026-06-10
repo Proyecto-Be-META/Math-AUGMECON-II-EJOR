@@ -173,7 +173,11 @@ In the case of NSGA-II, the following steps have to be performed on the director
 
 ### Execution
 
-#### NSGA-II
+#### AUGMECON-II and Math-AUGMECON-II
+
+Write here ...
+
+#### NSGA-II
 
 To run NSGA-II (from directory `source-code/nsga-ii` of the repository):
 
@@ -218,10 +222,6 @@ An example of execution of NSGA-II over a particular instance would be:
 ```bash
 node lib/implementation/main.js nsga -f ../../instances/lr/10x4-1.txt -r 2 --sc Time -t 60 -p 100 --co OrderRoute --cr 1 --ci true --ls LS
 ```
-
-#### AUGMECON-II and Math-AUGMECON-II
-
-
 
 ---
 
