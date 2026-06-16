@@ -175,13 +175,40 @@ In the case of NSGA-II, the following steps have to be performed on the director
 
 #### AUGMECON-II and Math-AUGMECON-II
 
-NOTE: You have to be placed in the folder ..\AUGMECON-II\
+For AUGMECON-II:
 
-If you desire to run AUGMECON-II with the original fleet size
+NOTE: You have to be placed in the folder C:\..\AUGMECON-II\
+
+If you want to run AUGMECON-II with the original fleet size for lr instances
 1. `include LLRPBO_OF.run`
 
-If you desire to run AUGMECON-II with the reduced fleet size
+If you want to run AUGMECON-II with the reduced fleet size for lr instances
 1. `include LLRPBO_RF.run`
+
+If you want to run AUGMECON-II with the reduced fleet size for p instances
+1. `include LLRPBO_p.run`
+
+For Math-AUGMECON-II:
+
+Considering the Original Fleet Size
+
+NOTE: You have to be placed in the folder C:\..\Math-AUGMECON-II\
+
+If you want to run AUGMECON-II with the original fleet size for lr instances
+1. `include LLRPBO_lr.run`
+
+If you want to run AUGMECON-II with the original fleet size for p instances
+1. `include LLRPBO_p.run`
+
+Considering the Reduced Fleet Size
+
+NOTE: You have to be placed in the folder C:\..\Math-AUGMECON-II_RF\
+
+If you want to run AUGMECON-II with the original fleet size for lr instances
+1. `include LLRPBO_lr.run`
+
+If you want to run AUGMECON-II with the original fleet size for p instances
+1. `include LLRPBO_p.run`
 
 #### NSGA-II
 
