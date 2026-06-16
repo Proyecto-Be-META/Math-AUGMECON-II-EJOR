@@ -1,0 +1,89 @@
+#Payoff F1
+let e:= 0.001;
+let eps0:= 10000000;
+let eps1:= 10000000;
+let eps2:= 10000000;
+let r1:= 10000000;
+let r2:= 10000000;
+
+#Pay off min F2|min F1
+let e:= 0;
+
+#Payoff F2
+let e:= 0.001;
+let eps0:= 10000000;
+let eps1:= 10000000;
+let eps2:= 10000000;
+
+let r2:= cotas[puntos,2] - cotas[1,2];
+let t1:=1;
+objective Biobjetivo1;
+printf("Obj1 Obj2 CPUTime \n") >>TablaMod3Ho.txt;
+repeat 
+	{
+		let b := 0;
+		display t1, cotas[t1,2] >>LLRPBO3.txt;
+		let e:= 0.001;
+		let eps2:= cotas[t1,2];
+		display eps2 >>LLRPBO3.txt;
+		solve;
+		let o1:= sum{i in origenes, j in clientes: j>0} o[i,j] * (sum{k in niveles} (k*w[i,j,k])) + sum{i in clientes, j in clientes: 0<i<>j>0} cost[i,j]*(sum{k in niveles: k < N} (k*y[i,j,k])); #>>LLRPBO3.txt;
+		if eps2-SD >= 0 then{
+			let o2:= eps2 - SD; # >>LLRPBO3.txt;
+		}
+		else{
+		 break;
+		}
+		printf(o1 & " " & o2 & " " & _solve_elapsed_time & "\n") >>TablaMod3Ho.txt;
+		display SD, eps2 - SD >>LLRPBO3.txt;
+		repeat{
+			let b:= b + 1;
+		}
+		until (eps2 - SD > cotas[t1+b,2] || t1 + b > (puntos/2));
+		display SD, b, int(b), solve_result_num >>LLRPBO3.txt;
+		if solve_result = "infeasible" then {
+			printf "--- infeasible at %d ---\n\n",t1;
+			#break;
+		}
+		else{
+			let t1:= t1 + b;
+		}
+} 
+until t1 > (puntos/2);
+let t1:= puntos;
+let eps2:= 10000000;
+objective Biobjetivo2;
+#printf("Cambio objetivo \n") >>TablaMod3Ho.txt;
+repeat 
+	{
+		let b := 0;
+		display t1, cotas[t1,1] >>LLRPBO3.txt;
+		#let e:= 0.001;
+		let eps1:= cotas[t1,1];
+		display eps1 >>LLRPBO3.txt;
+		solve;
+		let o2:= sum{i in origenes, j in clientes: j>0} o[i,j] * (sum{k in niveles} (w[i,j,k])) + sum{i in clientes, j in clientes: 0<i<>j>0} cost[i,j]*(sum{k in niveles: k < N} (y[i,j,k])); #>>LLRPBO3.txt;
+		if eps1-SL >= 0 then{
+			let o1:= eps1 - SL; # >>LLRPBO3.txt;
+		}
+		else{
+		 break;
+		}
+		printf(o1 & " " & o2 & " " & _solve_elapsed_time & "\n") >>TablaMod3Ho.txt;
+		display SL, eps1 - SL >>LLRPBO3.txt;
+		repeat{
+			let b:= b + 1;
+		}
+		until (t1 - b < 1 || eps1 - SL > cotas[t1-b,1]);
+		display SL, b, int(b), solve_result_num >>LLRPBO3.txt;
+		if solve_result = "infeasible" then {
+			printf "--- infeasible at %d ---\n\n",t1;
+			#break;
+		}
+		else{
+			let t1:= t1 - b;
+		}
+} 
+until t1 < (puntos/2);
+	
+
