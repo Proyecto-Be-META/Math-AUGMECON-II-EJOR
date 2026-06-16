@@ -197,9 +197,6 @@ NOTE: You have to be placed in the folder C:\..\Math-AUGMECON-II\
 If you want to run AUGMECON-II with the original fleet size for lr instances
 1. `include LLRPBO_lr.run`
 
-If you want to run AUGMECON-II with the original fleet size for p instances
-1. `include LLRPBO_p.run`
-
 Considering the Reduced Fleet Size
 
 NOTE: You have to be placed in the folder C:\..\Math-AUGMECON-II_RF\
