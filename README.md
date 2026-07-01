@@ -4,7 +4,7 @@
 >
 > European Journal of Operational Research
 >
-> DOI: Accepted for publication
+> DOI: 10.1016/j.ejor.2026.06.022
 
 This repository contains the instances, source code, execution scripts, and experimental results used in the evaluation presented in the article. Its purpose is to support reproducibility and enable comparison with future work.
 
