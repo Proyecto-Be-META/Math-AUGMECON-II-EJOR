@@ -465,24 +465,27 @@ where:
 If you use this repository, the instances, the source code, or the experimental results in your research, please cite the associated article:
 
 ```bibtex
-@article{segredo:2026a,
-  title   = {A Matheuristic Augmented $\varepsilon$-constraint Framework for a Bi-objective Multi-Depot Cumulative Capacitated Vehicle Routing Problem},
-  author  = {Eduardo Segredo, Samuel Nucamendi, Eduardo Lalla-Ruiz, Gara Miranda},
-  journal = {European Journal of Operational Research},
-  year    = {2026},
-  doi     = {Accepted for publication}
+@article{Segredo:2026a,
+title = {A matheuristic augmented ɛ-constraint framework for a bi-objective Multi-Depot Cumulative Capacitated Vehicle Routing Problem},
+journal = {European Journal of Operational Research},
+year = {2026},
+issn = {0377-2217},
+doi = {https://doi.org/10.1016/j.ejor.2026.06.022},
+url = {https://www.sciencedirect.com/science/article/pii/S037722172600576X},
+author = {Eduardo Segredo and Samuel Nucamendi-Guillén and Gara Miranda and Eduardo Lalla-Ruiz},
+keywords = {Cumulative capacitated vehicle routing problem, Multiple objective programming, Matheuristic, AUGMECON-II, Evolutionary computation}
 }
 ```
 
 You may also cite this repository directly:
 
 ```bibtex
-@misc{segredo:2026b,
+@misc{Segredo:2026b,
   title        = {A Matheuristic Augmented $\varepsilon$-constraint Framework for a Bi-objective Multi-Depot Cumulative Capacitated Vehicle Routing Problem},
   author       = {Eduardo Segredo, Samuel Nucamendi, Eduardo Lalla-Ruiz, Gara Miranda},
   year         = {2026},
   howpublished = {\url{https://github.com/PAL-ULL/Math-AUGMECON-II-EJOR}},
-  note         = {Repository associated with the article A Matheuristic Augmented $\varepsilon$-constraint Framework for a Bi-objective Multi-Depot Cumulative Capacitated Vehicle Routing Problem} published in the European Journal of Operational Research}
+  note         = {Repository associated with the article A Matheuristic Augmented $\varepsilon$-constraint Framework for a Bi-objective Multi-Depot Cumulative Capacitated Vehicle Routing Problem published in the European Journal of Operational Research}
 }
 ```
 
